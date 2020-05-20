@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/oracle/labs/resources/PriceQuoteService.wsdl" uri="src/conf/xml-resources/web-services/PriceQuoteService/wsdl/PriceQuoteService.wsdl"/>
+    <system systemId="file:/home/oracle/labs/resources/PriceQuote.xsd" uri="src/conf/xml-resources/web-services/PriceQuoteService/wsdl/PriceQuote.xsd"/>
+</catalog>

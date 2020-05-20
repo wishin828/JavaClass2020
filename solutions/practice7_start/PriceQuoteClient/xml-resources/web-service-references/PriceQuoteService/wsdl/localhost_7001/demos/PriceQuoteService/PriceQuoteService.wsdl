@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.11-b150616.1732 svn-revision#a247ba216861f2c0baac9a3657c5690bce0c744d. --><definitions xmlns:tns="http://demos/PriceQuote/Service" xmlns:ns1="http://demos/PriceQuote" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="PriceQuote" targetNamespace="http://demos/PriceQuote/Service">
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://demos/PriceQuote" schemaLocation="http://localhost:7001/demos/PriceQuoteService/PriceQuoteService?xsd=1"/>
+        </xsd:schema>
+    </types>
+    <message name="QuoteRequest">
+        <part name="request" element="ns1:Products"/>
+    </message>
+    <message name="QuoteResponse">
+        <part name="response" element="ns1:Quote"/>
+    </message>
+    <message name="QuoteFault">
+        <part name="response" element="ns1:QuoteError"/>
+    </message>
+    <portType name="PriceQuote">
+        <operation name="getQuote">
+            <input message="tns:QuoteRequest"/>
+            <output message="tns:QuoteResponse"/>
+            <fault name="QuoteFault" message="tns:QuoteFault"/>
+        </operation>
+    </portType>
+    <binding name="PriceQuoteSOAP" type="tns:PriceQuote">
+        <soap:binding transport="http://schemas.xml.org/soap/http" style="document"/>
+        <operation name="getQuote">
+            <input>
+                <soap:body use="literal" parts="request"/>
+            </input>
+            <output>
+                <soap:body use="literal" parts="response"/>
+            </output>
+            <fault name="QuoteFault">
+                <soap:fault use="literal" name="QuoteFault"/>
+            </fault>
+        </operation>
+    </binding>
+    <service name="PriceQuoteService">
+        <port name="PriceQuote" binding="tns:PriceQuoteSOAP">
+            <soap:address location="http://localhost:7001/demos/PriceQuoteService/PriceQuoteService"/>
+        </port>
+    </service>
+</definitions>

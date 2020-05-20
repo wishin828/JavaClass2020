@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Edit Product</title>
+        </h:head>
+        <h:body>
+            <h:form id="edit">
+                <p:growl id="growl" showDetail="false" sticky="true"/>
+                <p:breadCrumb>
+                    <p:menuitem value="Search" action="search"/>
+                    <p:menuitem value="List" action="list"/>
+                </p:breadCrumb>
+                <p:panel header="Find Products" footer="Change product and click Update.">
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="ID" for="id"/>
+                        <p:inputText id="id" value="${pm.product.id}" readonly="true"/>
+                        <p:outputLabel value="Name" for="name"/>
+                        <p:inputText id="name" value="${pm.product.name}" required="true"/>
+                        <p:outputLabel value="Price" for="price"/>
+                        <p:inputText id="price" value="${pm.product.price}" required="true"/>
+                        <p:outputLabel value="Best Before" for="date"/>
+                        <p:calendar id="date" value="${pm.product.bestBefore}" locale="#{null}" pattern="yyyy-MM-dd" showOn="button">
+                            <f:converter converterId="LocalDateConverter"/>
+                        </p:calendar>
+                        <p:commandButton value="Update" actionListener="#{pm.handleUpdate}" update="growl"/>
+                    </p:panelGrid>
+                </p:panel>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+
+
+

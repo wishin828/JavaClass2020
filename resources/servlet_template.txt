@@ -1,0 +1,17 @@
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<meta charset='UTF-8'>");
+            out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+            out.println("<link rel='stylesheet' type='text/css' href='/pm/css/pm.css'>");
+            out.println("<title>PAGE TITLE</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<header class='header'>PAGE HEADER</header>");
+            out.println("<nav class='nav'>PAGE NAVIGATION</nav>");
+            out.println("<section class='content'>");
+            out.println("PAGE CONTENT");
+            out.println("</section>");
+            out.println("<footer class='footer'>PAGE FOOTER</footer>");
+            out.println("</body>");
+            out.println("</html>");
