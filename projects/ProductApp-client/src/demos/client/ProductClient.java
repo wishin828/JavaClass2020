@@ -14,14 +14,15 @@ import javax.validation.ConstraintViolationException;
 public class ProductClient {
 
     private static final Logger logger = Logger.getLogger(ProductClient.class.getName());
-
+    
     public static void main(String[] args) {
+        ProductManager pm = new ProductManager();
         try {
             // Add code that will invoke ProductManager to test remote EJB 
 
             
-//            Product p = pm.findProduct(1);
-//            System.out.println(p);
+            Product p = pm.findProduct(1);
+            System.out.println(p.toString());
 
 //            List<Product> products = pm.findProductByName("Co%");
 //            products.stream().forEach(p -> System.out.println(p));

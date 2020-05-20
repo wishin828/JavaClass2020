@@ -149,7 +149,7 @@ public class Products implements Serializable {
 
     @Override
     public String toString() {
-        return id + " " + name +" " +price+" "+bestBefore+" "+ version;
+        return "id:"+id + "，name:" + name +"，price:" +price+"，bestBefore:"+bestBefore+"，version:"+ version;
     }
     
 }
