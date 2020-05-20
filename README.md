@@ -1,8 +1,8 @@
 # JavaClass2020
-環境建置
-fmw_12.2.1.0.0_wls_quick_Disk1_1of1.zip(WebLogic)
-netbeans-8.1-windows.exe
-jdk-8u51-windows-x64.exe
+環境建置  
+fmw_12.2.1.0.0_wls_quick_Disk1_1of1.zip(WebLogic)  
+netbeans-8.1-windows.exe  
+jdk-8u51-windows-x64.exe  
  
 Oracle WebLogic Server 12.2.1  Quick Installer
 ==========================================================================================
