@@ -19,7 +19,6 @@ public class ProductClient {
         ProductManager pm = new ProductManager();
         try {
             // Add code that will invoke ProductManager to test remote EJB 
-
             
             Product p = pm.findProduct(1);
             System.out.println(p.toString());
